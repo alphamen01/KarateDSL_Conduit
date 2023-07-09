@@ -2,7 +2,7 @@ Feature: Prueba para la pagina de inicio
 
 Background: Definir URL
     Given url 'https://api.realworld.io/api/'
-
+    @debug
     Scenario: Obtener todo los tags        
         Given path 'tags'
         When method Get
