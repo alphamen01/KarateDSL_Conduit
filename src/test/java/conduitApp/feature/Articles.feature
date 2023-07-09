@@ -1,12 +1,9 @@
 Feature: Articulos
 
 Background: Definir URL
-    Given url 'https://api.realworld.io/api/'
-    Given path 'users/login'
-        And request {"user": {"email": "lesg.2233@gmail.com", "password": "LuisEnrique"}}
-        When method Post 
-        Then status 200
-        * def token = response.user.token
+    Given url 'https://api.realworld.io/api/'    
+    * def tokenResponse = callonce read('classpath:src/test/java/helpers/CreateToken.feature') {"email": "lesg.2233@gmail.com", "password": "LuisEnrique"}
+    * def token = tokenResponse.authToken
 
     Scenario: Crear un nuevo articulo
         Given header Authorization = 'Token ' + token
