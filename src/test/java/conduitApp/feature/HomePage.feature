@@ -21,4 +21,4 @@ Background: Definir URL
         And match response.articles == '#[10]'
         And match each response.articles contains { slug: '#string' }
         And match each response.articles contains { tagList: '#array' }
-        And match response.articlesCount == 197
+        And match response.articlesCount == 200

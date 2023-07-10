@@ -19,5 +19,9 @@ function fn() {
     config.userEmail = 'lesg.2233.01@gmail.com'
     config.userPassword = 'LuisEnrique' 
   }
+
+  var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+  karate.configure('headers',  {Authorization: 'Token ' + accessToken})
+
   return config;
 }
