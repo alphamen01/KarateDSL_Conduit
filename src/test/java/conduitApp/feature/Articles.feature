@@ -1,8 +1,9 @@
 Feature: Articulos
 
 Background: Definir URL
-    Given url 'https://api.realworld.io/api/'    
-    * def tokenResponse = callonce read('classpath:src/test/java/helpers/CreateToken.feature') {"email": "lesg.2233@gmail.com", "password": "LuisEnrique"}
+    Given url apiUrl
+    * def tokenResponse = callonce read('classpath:helpers/CreateToken.feature')
+    #classpath:src/test/java/helpers/CreateToken.feature
     * def token = tokenResponse.authToken
 
     Scenario: Crear un nuevo articulo

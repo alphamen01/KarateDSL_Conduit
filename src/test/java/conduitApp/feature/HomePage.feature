@@ -1,7 +1,7 @@
 Feature: Prueba para la pagina de inicio
 
 Background: Definir URL
-    Given url 'https://api.realworld.io/api/'
+    Given url apiUrl
     @debug
     Scenario: Obtener todo los tags        
         Given path 'tags'
