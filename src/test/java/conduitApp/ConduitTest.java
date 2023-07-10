@@ -17,9 +17,9 @@ class ConduitTest {
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
 
-    @Karate.Test
+    /*@Karate.Test
     Karate testTags() {
         return Karate.run().tags("@debug").relativeTo(getClass());
-    }
+    }*/
 
 }

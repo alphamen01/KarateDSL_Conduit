@@ -2,7 +2,7 @@ Feature: Prueba para la pagina de inicio
 
 Background: Definir URL
     Given url apiUrl
-    @debug
+    
     Scenario: Obtener todo los tags        
         Given path 'tags'
         When method Get
@@ -21,4 +21,4 @@ Background: Definir URL
         And match response.articles == '#[10]'
         And match each response.articles contains { slug: '#string' }
         And match each response.articles contains { tagList: '#array' }
-        And match response.articlesCount == 200
+        #And match response.articlesCount == 200

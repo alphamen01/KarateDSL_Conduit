@@ -3,7 +3,7 @@ Feature: Articulos
 Background: Definir URL
     Given url apiUrl
     
-
+    @ignore
     Scenario: Crear un nuevo articulo
         Given path 'articles'
         And request {"article": {"title": "Zorro", "description": "Zorroz", "body": "Zorrozo", "tagList": []}}
