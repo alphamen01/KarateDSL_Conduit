@@ -1,4 +1,4 @@
-@debug
+
 Feature: Prueba para la pagina de inicio
 
 Background: Definir URL
